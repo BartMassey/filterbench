@@ -1,0 +1,8 @@
+Copyright © 2011 Bart Massey
+
+This code is the start of some digital filter design tools
+in Haskell. So far, the only tool is a sinewave generator
+for evaluating filters.
+
+This work is available under the MIT license. Please see the
+file COPYING in this distribution for licensing details.
