@@ -53,9 +53,11 @@ genSamples desc =
     genSinusoid step =
       concat $ replicate (descCycles desc) oneCycle
       where
-        oneCycle = map sin [ 0.0, 
-                             2.0 * pi / period ..
-                             2.0 * pi * (1.0 - 1.0 / period) ]
+        oneCycle = map sin [ 0.5 * p, 
+                             1.5 * p ..
+                             (period - 0.5) * p ]
+                   where
+                     p = 2.0 * pi / period
         period = let fs = 1.0 / s
                      fe = 1.0 / e in
                  let fx = fs * (fe / fs) ** (fStep / fSteps) in
